@@ -1,21 +1,12 @@
-<?php include dirname(__FILE__) . DIRECTORY_SEPARATOR . 'includes/functions.php' ?>
+<!DOCTYPE html>
 
-<?php plugin('header') ?>
-<section class="wrapper">
-	<header>
-		<h1>Home</h1>
-		<!-- Add your site or application content here -->
-		<p><em>Hello world! This is <strong>obse</strong>.</em></p>
-	</header>
+<?php plugin('ie_conditional_comments') ?>
+<?php plugin('head') ?>
+<body>
+<?php plugin('browsehappy') ?>
 
-	<div class="main">
-
-		<?php plugin('home_news') ?>
+<header>
+	<div class="wrapper">
+		<a href="https://github.com/alebenson/obse/">Check <strong>obse</strong> on github!</a>
 	</div>
-
-	<div class="sidebar">
-		<?php plugin('twitter_widget') ?>
-	</div>
-</section>
-
-<?php plugin('footer') ?>
+</header>
