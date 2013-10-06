@@ -100,9 +100,50 @@ textarea {
 
 
 
+h1{
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    color: #ff0066;
+}
+p{
+    color: #999;
+}
 
 
+body>header{
+    border-bottom: 1px solid #ccc;
+}
+body>header>div{
+    text-align: center;
+    padding: 20px;
+}
+figcaption{
+    font-size: .7em;
+    font-style: italic;
+    color: #666;
+}
+article{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
 
+.wrapper{
+    margin: 0 auto;
+    width: 940px;
+    overflow: hidden;
+}
+.main,.sidebar{
+    float: left;
+}
+.main{
+    width: 620px;
+}
+.sidebar{
+    width: 300px;
+    margin-left: 20px;
+}
 
 
 
