@@ -1,4 +1,4 @@
-![](obse_github_header.png "obse")
+obse
 
 ====
 
