@@ -7,10 +7,19 @@ define( 'obse_LAYOUT'  , obse_PATH . 'layout'  . DIRECTORY_SEPARATOR );
 define( 'obse_DATA'    , obse_PATH . 'data'    . DIRECTORY_SEPARATOR );
 
 function include_file($included_filename, array $obse_query = array()) {
-	if (!empty($obse_query)) {
-		extract($obse_query, EXTR_PREFIX_INVALID, 'var_');
+	if (!is_string($included_filename)) {
+		trigger_error('Argument 1 passed to include_file() must be an instance of string, '. gettype($included_filename) .' given ', E_USER_ERROR);
 	}
-	include $included_filename;
+	
+	unset($included_filename);
+	
+	if (!empty($obse_query)) {
+		if (array_key_exists('obse_query', $obse_query)) {
+			trigger_error('Argument 2 passed to include_filename() must not contain array key "obse_query" ', E_USER_WARNING);
+		}
+		extract($obse_query, EXTR_SKIP);
+	}
+	include func_get_arg(0);
 }
 
 function plugin($plugin_filename, array $obse_query = array() ) {
