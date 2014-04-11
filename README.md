@@ -6,3 +6,5 @@ De esta manera tener archivos reutilizables y con poco código.
 ejemplo
 =======
 El ejemplo está basado en una descarga de HTML5 Boilerplate. Como sería haberlo construido con **obse** para poder reutilizar todos los componentes.
+
+test
